@@ -73,11 +73,13 @@ nav li:hover {
   font-size: 2rem;
   font-weight: 700;
   font-size: 50px;
+  cursor: pointer;
 }
 
 #hero {
   background: var(--dark-color);
   padding: 4rem 0;
+  border-bottom: 4px solid var(--lighting-color);
 }
 
 #hero.container {
@@ -103,6 +105,7 @@ nav li:hover {
 .h1_text {
   font-size: 4rem;
   font-weight: bold;
+  color: yellow;
   /* color: var(--secondary-color); */
   background-color: #fff700;
 }
@@ -119,7 +122,7 @@ nav li:hover {
   border-right: 0.15rem solid orange;
   white-space: nowrap;
   margin: 0 auto;
-  animation: typing 4s steps(30, end), blink-caret 0.55s step-end;
+  animation: typing 4s steps(30, end), blink-caret 0.55s step-end infinite;
 }
 
 @keyframes typing {
@@ -139,4 +142,109 @@ nav li:hover {
   50% {
     border-color: orange;
   }
+}
+
+/* Project Section */
+
+#project {
+  background-color: var(--dark-color);
+}
+
+#project h2 {
+  font-size: 6rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.project_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem;
+}
+
+.grid_item {
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  opacity: 0.8;
+}
+
+.card:hover .card_content {
+  background: white;
+  color: var(--dark-color);
+}
+
+.card_content {
+  padding: 2rem;
+  position: relative;
+  top: -6.5 rem;
+  margin-bottom: -6.5rem;
+  transition: 0.5s ease-in-out;
+}
+
+.card_cont h3 {
+  font-size: 25px;
+}
+
+.grid_item {
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5 rem;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+  transition: 0.3 ease-in-out;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.card:hover .card_content {
+  background: white;
+  color: var(--dark-color);
+  transform: translateY(0px);
+}
+
+.card_content {
+  padding: 2rem;
+  position: relative;
+  top: -6.5rem;
+  margin-top: -6.5rem;
+  transition: 0.5s ease-in-out;
+  transform: translateY(100px);
+}
+
+.card_content h3 {
+  text-align: center;
 }
